@@ -269,23 +269,3 @@ void SetCarga1() {
     flag1 = 0;
   }
 }
-
-void W5100Class::init(void)
-{
- delay(300);
-
- SPI.begin();
- initSS();
- 
- writeMR(1<<RST);
- writeTMSR(0x55);
- writeRMSR(0x55);
-
- setRetransmissionTime(0x07D0);
- setRetransmissionCount(3);
-
- for (int i=0; i<MAX_SOCK_NUM; i++) {
-   SBASE[i] = TXBUF_BASE + SSIZE * i;
-   RBASE[i] = RXBUF_BASE + RSIZE * i;
- }
-}
