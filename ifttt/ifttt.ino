@@ -9,7 +9,7 @@ IPAddress gateway(192, 168, 1, 1); //Define o gateway
 IPAddress subnet(255, 255, 255, 0); //Define a máscara de rede
 EthernetServer server(80);
 
-char MakerIFTTT_Key[] = "dDGYqbaY_xYWmKU0jH86SK";
+char MakerIFTTT_Key[] = "you key";
 char MakerIFTTT_Event[] = "arduino";
 
 const int LDR = A4;
